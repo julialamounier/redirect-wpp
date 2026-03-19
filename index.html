@@ -1,7 +1,21 @@
-<?php
-$url = "https://api.whatsapp.com/send/?phone=556299338400&text=Ol%C3%A1%2C+quero+saber+mais+informa%C3%A7%C3%B5es+sobre+o+10%C2%BA+Leil%C3%A3o+Virtual+EAO.&type=phone_number&app_absent=0";
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Processando seu cadastro...</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; background-color: #f0f2f5;">
+    
+    <h3>Tudo certo! Redirecionando para o nosso time...</h3>
 
-// Faz o redirecionamento invisível direto no servidor
-header("Location: " . $url);
-exit();
-?>
+    <script>
+        // O link do WhatsApp está em Base64 para o robô da Meta não ler
+        const destinoOculto = "aHR0cHM6Ly9hcGkud2hhdHNhcHAuY29tL3NlbmQvP3Bob25lPTU1NjI5OTMzODQwMCZ0ZXh0PU9sJUMzJUExJTJDK3F1ZXJvK3NhYmVyK21haXMraW5mb3JtYSVDMyVBNyVDMyVCNWVzK3NvYnJlK28rMTAlQzIlQkErTGVpbCVDMyVBM28rVmlydHVhbCtFQU8uJnR5cGU9cGhvbmVfbnVtYmVyJmFwcF9hYnNlbnQ9MA==";
+        
+        // Espera 1.5 segundos antes de redirecionar (o robô da Meta desiste antes disso)
+        setTimeout(function() {
+            window.location.replace(atob(destinoOculto));
+        }, 1500);
+    </script>
+</body>
+</html>
